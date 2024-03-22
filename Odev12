@@ -5,8 +5,8 @@ WHERE length >
 
 -2
 SELECT COUNT (*) FROM film
-WHERE rental_rate = (
-SELECT MAX (rental_rate) FROM film)
+WHERE rental_rate = 
+(SELECT MAX (rental_rate) FROM film)
 
 -3
 SELECT * FROM film
@@ -15,4 +15,4 @@ WHERE rental_rate =
 
 -4
 SELECT customer_id FROM payment 
-WHERE amount = (SELECT MAX(amount) from payment);
+WHERE amount = (SELECT MAX(amount) FROM payment);
